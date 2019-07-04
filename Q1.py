@@ -8,8 +8,7 @@ target = 'https://www.ptt.cc/bbs/NBA/index.html'   #ptt-NBA-board第一頁
 req = requests.get(url=target,headers=headers)
 soup = BeautifulSoup(req.text,'html.parser')
 
-#獲取本頁所有貼文的資訊-------(Q1)
+#####獲取本頁所有貼文的資訊####(Q1)
 title = soup.find_all('div' , 'title')
 print(title)
-
-print(title)
+#############################
