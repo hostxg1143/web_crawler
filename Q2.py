@@ -9,6 +9,6 @@ req = requests.get(url=target,headers=headers)
 soup = BeautifulSoup(req.text,'html.parser')
 
 ###獲得下一頁的網址####(Q2)
-next_page ='https://www.ptt.cc'+soup.find('div','btn-group btn-group-paging').find_next('a','btn wide').find_next_sibling('a')['href']
-print(next_page)
+next_page = 'https://www.ptt.cc' + soup.find('div','btn-group btn-group-paging').find_next('a' , 'btn wide').find_next_sibling('a')['href']
 ######################
+print(next_page)
