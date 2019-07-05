@@ -9,6 +9,6 @@ req = requests.get(url=target,headers=headers)
 soup = BeautifulSoup(req.text,'html.parser')
 
 #獲取本頁所有貼文的資訊(Q1)
-title = soup.#答案寫這
-#########################
+title = soup.find_all('div' , 'title')
 print(title)
+########################

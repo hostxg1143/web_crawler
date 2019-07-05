@@ -8,7 +8,7 @@ target = 'https://www.ptt.cc/bbs/NBA/index.html'   #ptt-NBA-board第一頁
 req = requests.get(url=target,headers=headers)
 soup = BeautifulSoup(req.text,'html.parser')
 
-#獲取本頁所有貼文的資訊(Q1)
-title = soup.#答案寫這
-#########################
-print(title)
+#獲得下一頁的網址(Q2)
+next_page = 'https://www.ptt.cc' + soup.find('div','btn-group btn-group-paging').find_next('a' , 'btn wide').find_next('a')['href']
+###################
+print(next_page)
